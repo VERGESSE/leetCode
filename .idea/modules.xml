@@ -4,10 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1. 两数之和/1. 两数之和.iml" filepath="$PROJECT_DIR$/1. 两数之和/1. 两数之和.iml" />
       <module fileurl="file://$PROJECT_DIR$/11. 盛最多水的容器/11. 盛最多水的容器.iml" filepath="$PROJECT_DIR$/11. 盛最多水的容器/11. 盛最多水的容器.iml" />
+      <module fileurl="file://$PROJECT_DIR$/143. 重排链表/143. 重排链表.iml" filepath="$PROJECT_DIR$/143. 重排链表/143. 重排链表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/147. 对链表进行插入排序/147. 对链表进行插入排序.iml" filepath="$PROJECT_DIR$/147. 对链表进行插入排序/147. 对链表进行插入排序.iml" />
+      <module fileurl="file://$PROJECT_DIR$/148. 排序链表/148. 排序链表.iml" filepath="$PROJECT_DIR$/148. 排序链表/148. 排序链表.iml" />
       <module fileurl="file://$PROJECT_DIR$/149. 直线上最多的点数/149. 直线上最多的点数.iml" filepath="$PROJECT_DIR$/149. 直线上最多的点数/149. 直线上最多的点数.iml" />
       <module fileurl="file://$PROJECT_DIR$/15. 三数之和/15. 三数之和.iml" filepath="$PROJECT_DIR$/15. 三数之和/15. 三数之和.iml" />
       <module fileurl="file://$PROJECT_DIR$/167. 两数之和 II - 输入有序数组/167. 两数之和 II - 输入有序数组.iml" filepath="$PROJECT_DIR$/167. 两数之和 II - 输入有序数组/167. 两数之和 II - 输入有序数组.iml" />
       <module fileurl="file://$PROJECT_DIR$/18. 四数之和/18. 四数之和.iml" filepath="$PROJECT_DIR$/18. 四数之和/18. 四数之和.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19. 删除链表的倒数第N个节点/19. 删除链表的倒数第N个节点.iml" filepath="$PROJECT_DIR$/19. 删除链表的倒数第N个节点/19. 删除链表的倒数第N个节点.iml" />
       <module fileurl="file://$PROJECT_DIR$/2. 两数相加/2. 两数相加.iml" filepath="$PROJECT_DIR$/2. 两数相加/2. 两数相加.iml" />
       <module fileurl="file://$PROJECT_DIR$/202. 快乐数/202. 快乐数.iml" filepath="$PROJECT_DIR$/202. 快乐数/202. 快乐数.iml" />
       <module fileurl="file://$PROJECT_DIR$/203. 移除链表元素/203. 移除链表元素.iml" filepath="$PROJECT_DIR$/203. 移除链表元素/203. 移除链表元素.iml" />
@@ -19,7 +23,11 @@
       <module fileurl="file://$PROJECT_DIR$/217. 存在重复元素/217. 存在重复元素.iml" filepath="$PROJECT_DIR$/217. 存在重复元素/217. 存在重复元素.iml" />
       <module fileurl="file://$PROJECT_DIR$/219. 存在重复元素 II/219. 存在重复元素 II.iml" filepath="$PROJECT_DIR$/219. 存在重复元素 II/219. 存在重复元素 II.iml" />
       <module fileurl="file://$PROJECT_DIR$/220. 存在重复元素 III/220. 存在重复元素 III.iml" filepath="$PROJECT_DIR$/220. 存在重复元素 III/220. 存在重复元素 III.iml" />
+      <module fileurl="file://$PROJECT_DIR$/234. 回文链表/234. 回文链表.iml" filepath="$PROJECT_DIR$/234. 回文链表/234. 回文链表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/237. 删除链表中的节点/237. 删除链表中的节点.iml" filepath="$PROJECT_DIR$/237. 删除链表中的节点/237. 删除链表中的节点.iml" />
+      <module fileurl="file://$PROJECT_DIR$/24. 两两交换链表中的节点/24. 两两交换链表中的节点.iml" filepath="$PROJECT_DIR$/24. 两两交换链表中的节点/24. 两两交换链表中的节点.iml" />
       <module fileurl="file://$PROJECT_DIR$/242.有效的字母异位词/242.有效的字母异位词.iml" filepath="$PROJECT_DIR$/242.有效的字母异位词/242.有效的字母异位词.iml" />
+      <module fileurl="file://$PROJECT_DIR$/25. K 个一组翻转链表/25. K 个一组翻转链表.iml" filepath="$PROJECT_DIR$/25. K 个一组翻转链表/25. K 个一组翻转链表.iml" />
       <module fileurl="file://$PROJECT_DIR$/26. 删除排序数组中的重复项/26. 删除排序数组中的重复项.iml" filepath="$PROJECT_DIR$/26. 删除排序数组中的重复项/26. 删除排序数组中的重复项.iml" />
       <module fileurl="file://$PROJECT_DIR$/27. 移除元素/27. 移除元素.iml" filepath="$PROJECT_DIR$/27. 移除元素/27. 移除元素.iml" />
       <module fileurl="file://$PROJECT_DIR$/283. 移动0/283. 移动0.iml" filepath="$PROJECT_DIR$/283. 移动0/283. 移动0.iml" />
@@ -33,6 +41,7 @@
       <module fileurl="file://$PROJECT_DIR$/451. 根据字符出现频率排序/451. 根据字符出现频率排序.iml" filepath="$PROJECT_DIR$/451. 根据字符出现频率排序/451. 根据字符出现频率排序.iml" />
       <module fileurl="file://$PROJECT_DIR$/454. 四数相加 II/454. 四数相加 II.iml" filepath="$PROJECT_DIR$/454. 四数相加 II/454. 四数相加 II.iml" />
       <module fileurl="file://$PROJECT_DIR$/49. 字母异位词分组/49. 字母异位词分组.iml" filepath="$PROJECT_DIR$/49. 字母异位词分组/49. 字母异位词分组.iml" />
+      <module fileurl="file://$PROJECT_DIR$/61. 旋转链表/61. 旋转链表.iml" filepath="$PROJECT_DIR$/61. 旋转链表/61. 旋转链表.iml" />
       <module fileurl="file://$PROJECT_DIR$/75. 颜色分类/75. 颜色分类.iml" filepath="$PROJECT_DIR$/75. 颜色分类/75. 颜色分类.iml" />
       <module fileurl="file://$PROJECT_DIR$/76. 最小覆盖子串/76. 最小覆盖子串.iml" filepath="$PROJECT_DIR$/76. 最小覆盖子串/76. 最小覆盖子串.iml" />
       <module fileurl="file://$PROJECT_DIR$/82. 删除排序链表中的重复元素 II/82. 删除排序链表中的重复元素 II.iml" filepath="$PROJECT_DIR$/82. 删除排序链表中的重复元素 II/82. 删除排序链表中的重复元素 II.iml" />
