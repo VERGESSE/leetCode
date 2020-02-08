@@ -50,6 +50,7 @@
       <module fileurl="file://$PROJECT_DIR$/88. 合并两个有序数组/88. 合并两个有序数组.iml" filepath="$PROJECT_DIR$/88. 合并两个有序数组/88. 合并两个有序数组.iml" />
       <module fileurl="file://$PROJECT_DIR$/912. 排序数组/912. 排序数组.iml" filepath="$PROJECT_DIR$/912. 排序数组/912. 排序数组.iml" />
       <module fileurl="file://$PROJECT_DIR$/92. 反转链表 II/92. 反转链表 II.iml" filepath="$PROJECT_DIR$/92. 反转链表 II/92. 反转链表 II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/排序算法/排序算法.iml" filepath="$PROJECT_DIR$/排序算法/排序算法.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/算法.iml" filepath="$PROJECT_DIR$/.idea/算法.iml" />
     </modules>
   </component>
