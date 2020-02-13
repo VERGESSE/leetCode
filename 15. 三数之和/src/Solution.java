@@ -16,5 +16,7 @@ class Solution {
         for (Map.Entry<Integer, List<Integer>> entry : entries) {
             Integer key = entry.getKey();
         }
+
+        return ret;
     }
 }
