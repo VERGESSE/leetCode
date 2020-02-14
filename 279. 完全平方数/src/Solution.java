@@ -2,6 +2,35 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Solution {
+
+    public int numSquares(int n) {     // 动态规划  超31.88%
+
+        int[] memo = new int[n+1];
+        memo[1] = 1;
+
+        for (int i = 2; i < n+1; i++){
+            if ((int)Math.sqrt(i)*(int)Math.sqrt(i) == i)
+                memo[i] = 1;
+            for (int j = 1; j < Math.sqrt(i); j++){
+                memo[i] = min3(memo[i],1+memo[i-j*j],Integer.MAX_VALUE);
+            }
+        }
+        return memo[n];
+    }
+
+    private int min3(int a,int b,int c){
+        if (a == 0)
+            return Math.min(b,c);
+        return Math.min(a,Math.min(b,c));
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Solution().numSquares(13));
+    }
+
+}
+
+/*  图的解法，广度优先遍历   超93%
     private class Node {
         int val;
         int step;
@@ -40,9 +69,4 @@ public class Solution {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        System.out.println(new Solution().numSquares(13));
-    }
-
-}
+ */
