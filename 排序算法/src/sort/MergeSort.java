@@ -38,7 +38,8 @@ public class MergeSort extends Sorter {
         while (i<=mid) temp[k++] = arr[i++];
         while (j<=rightBound) temp[k++] = arr[j++];
 
-        for (int m = 0; m < temp.length; m++) arr[leftPtr + m] = temp[m];
+        for (int m = 0; m < temp.length; m++)
+            arr[leftPtr + m] = temp[m];
     }
 
     public static void main(String[] args) {
