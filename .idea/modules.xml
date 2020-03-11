@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/104. 二叉树的最大深度/104. 二叉树的最大深度.iml" filepath="$PROJECT_DIR$/104. 二叉树的最大深度/104. 二叉树的最大深度.iml" />
       <module fileurl="file://$PROJECT_DIR$/107. 二叉树的层次遍历 II/107. 二叉树的层次遍历 II.iml" filepath="$PROJECT_DIR$/107. 二叉树的层次遍历 II/107. 二叉树的层次遍历 II.iml" />
       <module fileurl="file://$PROJECT_DIR$/108. 将有序数组转换为二叉搜索树/108. 将有序数组转换为二叉搜索树.iml" filepath="$PROJECT_DIR$/108. 将有序数组转换为二叉搜索树/108. 将有序数组转换为二叉搜索树.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1091. 二进制矩阵中的最短路径/1091. 二进制矩阵中的最短路径.iml" filepath="$PROJECT_DIR$/1091. 二进制矩阵中的最短路径/1091. 二进制矩阵中的最短路径.iml" />
       <module fileurl="file://$PROJECT_DIR$/11. 盛最多水的容器/11. 盛最多水的容器.iml" filepath="$PROJECT_DIR$/11. 盛最多水的容器/11. 盛最多水的容器.iml" />
       <module fileurl="file://$PROJECT_DIR$/110. 平衡二叉树/110. 平衡二叉树.iml" filepath="$PROJECT_DIR$/110. 平衡二叉树/110. 平衡二叉树.iml" />
       <module fileurl="file://$PROJECT_DIR$/111. 二叉树的最小深度/111. 二叉树的最小深度.iml" filepath="$PROJECT_DIR$/111. 二叉树的最小深度/111. 二叉树的最小深度.iml" />
@@ -110,8 +111,10 @@
       <module fileurl="file://$PROJECT_DIR$/70. 爬楼梯/70. 爬楼梯.iml" filepath="$PROJECT_DIR$/70. 爬楼梯/70. 爬楼梯.iml" />
       <module fileurl="file://$PROJECT_DIR$/71. 简化路径/71. 简化路径.iml" filepath="$PROJECT_DIR$/71. 简化路径/71. 简化路径.iml" />
       <module fileurl="file://$PROJECT_DIR$/75. 颜色分类/75. 颜色分类.iml" filepath="$PROJECT_DIR$/75. 颜色分类/75. 颜色分类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/752. 打开转盘锁/752. 打开转盘锁.iml" filepath="$PROJECT_DIR$/752. 打开转盘锁/752. 打开转盘锁.iml" />
       <module fileurl="file://$PROJECT_DIR$/76. 最小覆盖子串/76. 最小覆盖子串.iml" filepath="$PROJECT_DIR$/76. 最小覆盖子串/76. 最小覆盖子串.iml" />
       <module fileurl="file://$PROJECT_DIR$/77. 组合/77. 组合.iml" filepath="$PROJECT_DIR$/77. 组合/77. 组合.iml" />
+      <module fileurl="file://$PROJECT_DIR$/773. 滑动谜题/773. 滑动谜题.iml" filepath="$PROJECT_DIR$/773. 滑动谜题/773. 滑动谜题.iml" />
       <module fileurl="file://$PROJECT_DIR$/78. 子集/78. 子集.iml" filepath="$PROJECT_DIR$/78. 子集/78. 子集.iml" />
       <module fileurl="file://$PROJECT_DIR$/785. 判断二分图/785. 判断二分图.iml" filepath="$PROJECT_DIR$/785. 判断二分图/785. 判断二分图.iml" />
       <module fileurl="file://$PROJECT_DIR$/79. 单词搜索/79. 单词搜索.iml" filepath="$PROJECT_DIR$/79. 单词搜索/79. 单词搜索.iml" />
@@ -126,6 +129,8 @@
       <module fileurl="file://$PROJECT_DIR$/93. 复原IP地址/93. 复原IP地址.iml" filepath="$PROJECT_DIR$/93. 复原IP地址/93. 复原IP地址.iml" />
       <module fileurl="file://$PROJECT_DIR$/94. 二叉树的中序遍历/94. 二叉树的中序遍历.iml" filepath="$PROJECT_DIR$/94. 二叉树的中序遍历/94. 二叉树的中序遍历.iml" />
       <module fileurl="file://$PROJECT_DIR$/98. 验证二叉搜索树/98. 验证二叉搜索树.iml" filepath="$PROJECT_DIR$/98. 验证二叉搜索树/98. 验证二叉搜索树.iml" />
+      <module fileurl="file://$PROJECT_DIR$/980. 不同路径 III/980. 不同路径 III.iml" filepath="$PROJECT_DIR$/980. 不同路径 III/980. 不同路径 III.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LCP 4. 覆盖/LCP 4. 覆盖.iml" filepath="$PROJECT_DIR$/LCP 4. 覆盖/LCP 4. 覆盖.iml" />
       <module fileurl="file://$PROJECT_DIR$/排序算法/排序算法.iml" filepath="$PROJECT_DIR$/排序算法/排序算法.iml" />
     </modules>
   </component>
