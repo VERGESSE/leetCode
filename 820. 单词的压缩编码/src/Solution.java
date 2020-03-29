@@ -18,45 +18,68 @@ class Solution1 {
 /*  Trie
 class Solution {
     public int minimumLengthEncoding(String[] words) {
-        TrieNode trie = new TrieNode();
-        Map<TrieNode, Integer> nodes = new HashMap();
-
-        for (int i = 0; i < words.length; ++i) {
-            String word = words[i];
-            TrieNode cur = trie;
-            for (int j = word.length() - 1; j >= 0; --j)
-                cur = cur.get(word.charAt(j));
-            nodes.put(cur, i);
+        int len = 0;
+        Trie trie = new Trie();
+        // 先对单词列表根据单词长度由长到短排序
+        Arrays.sort(words, (s1, s2) -> s2.length() - s1.length());
+        // 单词插入trie，返回该单词增加的编码长度
+        for (String word: words) {
+            len += trie.insert(word);
         }
+        return len;
+    }
+}
 
-        int ans = 0;
-        for (TrieNode node: nodes.keySet()) {
-            if (node.count == 0)
-                ans += words[nodes.get(node)].length() + 1;
+// 定义tire
+class Trie {
+
+    TrieNode root;
+
+    public Trie() {
+        root = new TrieNode();
+    }
+
+    public int insert(String word) {
+        TrieNode cur = root;
+        boolean isNew = false;
+        // 倒着插入单词
+        for (int i = word.length() - 1; i >= 0; i--) {
+            int c = word.charAt(i) - 'a';
+            if (cur.children[c] == null) {
+                isNew = true; // 是新单词
+                cur.children[c] = new TrieNode();
+            }
+            cur = cur.children[c];
         }
-        return ans;
-
+        // 如果是新单词的话编码长度增加新单词的长度+1，否则不变。
+        return isNew? word.length() + 1: 0;
     }
 }
 
 class TrieNode {
-    TrieNode[] children;
-    int count;
-    TrieNode() {
-        children = new TrieNode[26];
-        count = 0;
-    }
-    public TrieNode get(char c) {
-        if (children[c - 'a'] == null) {
-            children[c - 'a'] = new TrieNode();
-            count++;
-        }
-        return children[c - 'a'];
-    }
+    char val;
+    TrieNode[] children = new TrieNode[26];
+
+    public TrieNode() {}
 }
  */
 
 // 做题的时候傻掉了，没看到必须要以#结尾
+/*  而且String的操作还是有疏漏
+    public int minimumLengthEncoding(String[] words) {
+        // 先按字符串长度进行排序
+        Arrays.sort(words, (w1, w2) -> w2.length() - w1.length());
+
+        // 然后在进行匹配的计算
+        String sb = new String();
+        for (String word : words) {
+            if (!sb.contains(word + "#")) {
+                sb = sb.concat(word + "#");
+            }
+        }
+        return sb.length();
+    }
+ */
 public class Solution {
     public int minimumLengthEncoding(String[] words) {
 
@@ -64,7 +87,6 @@ public class Solution {
         if (words.length == 0) return words.length;
         if (words.length == 1) return words[0].length()+1;
         List<Integer> delList = new ArrayList<>();
-
         char[][] wordsChar = new char[words.length][];
         Arrays.sort(words, Comparator.comparingInt(String::length));
 
