@@ -15,6 +15,24 @@ class Solution {
     }
 }
 
+/* 递归实现
+class Solution {
+    public int lastRemaining(int n, int m) {
+
+        return lastNum(n, m);
+    }
+
+    private int lastNum(int n, int m){
+
+        if (n == 1)
+            return 0;
+        int temp = lastNum(n - 1, m);
+
+        return (m + temp) % n;
+    }
+}
+ */
+
 /*
 第一轮是 [0, 1, 2, 3, 4] ，所以是 [0, 1, 2, 3, 4] 这个数组的多个复制。这一轮 2 删除了。
 
