@@ -21,30 +21,34 @@ class Solution {
         if (landQueue.size() == 0 || seaList.size() == 0)
             return -1;
 
+        node:
         while (!landQueue.isEmpty()){
 
-            Node land = landQueue.remove();
+            int size = landQueue.size();
+            for (int n = 0; n < size; n++) {
+                Node land = landQueue.remove();
 
-            for (int i = 0; i < dir.length; i++){
-                int newX = land.x + dir[i][0];
-                int newY = land.y + dir[i][1];
-                if (newX >= 0 && newX < grid.length && newY >=0 && newY < grid.length
-                        && grid[newX][newY] == 0) {
-                    grid[newX][newY] = land.val + 1;
-                    landQueue.add(new Node(newX, newY, land.val+1));
-                    if (seaList.size() > 1)
-                        seaList.remove(new Node(newX, newY, 0));
+                for (int i = 0; i < dir.length; i++) {
+                    int newX = land.x + dir[i][0];
+                    int newY = land.y + dir[i][1];
+                    if (newX >= 0 && newX < grid.length && newY >= 0 && newY < grid.length
+                            && grid[newX][newY] == 0) {
+                        grid[newX][newY] = land.val + 1;
+                        landQueue.add(new Node(newX, newY, land.val + 1));
+                        if (seaList.size() > 1)
+                            seaList.remove(new Node(newX, newY, 0));
+                    }
                 }
-            }
 
-            if (seaList.size() == 1){
-                for (int i = 0; i < dir.length; i++){
-                    int newX = seaList.get(0).x + dir[i][0];
-                    int newY = seaList.get(0).y + dir[i][1];
-                    if (newX >= 0 && newX < grid.length && newY >=0 && newY < grid.length)
-                        res = Math.min(grid[newX][newY], res);
+                if (seaList.size() == 1) {
+                    for (int i = 0; i < dir.length; i++) {
+                        int newX = seaList.get(0).x + dir[i][0];
+                        int newY = seaList.get(0).y + dir[i][1];
+                        if (newX >= 0 && newX < grid.length && newY >= 0 && newY < grid.length)
+                            res = Math.min(grid[newX][newY], res);
+                    }
+                    break node;
                 }
-                break;
             }
         }
 
