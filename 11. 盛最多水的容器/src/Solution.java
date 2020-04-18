@@ -10,8 +10,4 @@ public class Solution {
         }
         return maxarea;
     }
-
-    public static void main(String[] args) {
-
-    }
 }
