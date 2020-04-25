@@ -8,7 +8,6 @@ class Solution {
 
     public List<List<Integer>> permute(int[] nums) {
         res.clear();
-
         if (nums.length == 0)
             return res;
 
