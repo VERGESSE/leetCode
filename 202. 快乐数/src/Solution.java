@@ -1,32 +1,30 @@
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 class Solution {
     public boolean isHappy(int n) {
-        Set<Integer> set = new HashSet<>();
-        int m = 0;
-        while(true){
-            while(n != 0){
-                m += Math.pow(n%10, 2);
-                n /= 10;
-            }
-            if(m == 1){
+        Set<Integer> memo = new HashSet();
+
+        while(!memo.contains(n)){
+            memo.add(n);
+            n = cal(n);
+            if(n == 1)
                 return true;
-            }
-            if(set.contains(m)){
-                return false;
-            }else{
-                set.add(m);
-                n = m;
-                m = 0;
-            }
         }
+        return false;
+    }
+
+    private int cal(int num){
+        int res = 0;
+        while(num > 0){
+            res += Math.pow(num%10,2);
+            num = num / 10;
+        }
+        return res;
     }
 }
 
-//fast
+//fast   快慢指针
 class Solution2 {
     public boolean isHappy(int n) {
         int slow = cal(n);
