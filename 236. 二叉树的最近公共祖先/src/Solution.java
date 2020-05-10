@@ -7,16 +7,17 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+// O(n2)
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
         if (root == null) return null;
 
-        boolean pinleft = hasnode(root.left,p);
-        boolean qinleft = hasnode(root.left,q);
-
         if (root.val == p.val || root.val == q.val)
             return root;
+
+        boolean pinleft = hasnode(root.left,p);
+        boolean qinleft = hasnode(root.left,q);
 
         TreeNode ret = null;
         if (pinleft && qinleft){
@@ -59,17 +60,14 @@ class Solution {
 
     }
 }
-
  */
 
 /*  fast
-
 class Solution {
     // 我们设置成有可能q不在 那么返回root
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 两个节点的最低公共祖先
         // 如果p q在同一边
-
          if (root == null) return null;
 
          if (root == p || root == q) {
