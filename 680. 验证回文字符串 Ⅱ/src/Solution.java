@@ -17,7 +17,7 @@ class Solution {
 
         return true;
     }
-    
+
     /**
      * 判断是否回文字符串
      */
