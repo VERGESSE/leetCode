@@ -8,6 +8,7 @@ class Solution {
         int[] right = new int[len];
 
         Stack<Integer> stack = new Stack<>();
+        // 寻找i号位置左边界
         for (int i = 0; i < len; ++i) {
             while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
                 stack.pop();
@@ -17,6 +18,7 @@ class Solution {
         }
 
         stack.clear();
+        // 寻找i号位置右边界
         for (int i = len - 1; i >= 0; --i) {
             while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
                 stack.pop();
