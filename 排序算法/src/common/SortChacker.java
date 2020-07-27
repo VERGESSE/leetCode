@@ -18,7 +18,7 @@ public class SortChacker {
         SelectionSort selectionSort = new SelectionSort();
         ShellSort shellSort = new ShellSort();
 
-        ExecutorService executor = Executors.newCachedThreadPool();
+        ExecutorService executor = Executors.newFixedThreadPool(8);
         executor.execute(new RunSort(bubbleSort));
         executor.execute(new RunSort(countSort));
         executor.execute(new RunSort(insertionSort));
@@ -28,13 +28,16 @@ public class SortChacker {
         executor.execute(new RunSort(selectionSort));
         executor.execute(new RunSort(shellSort));
 
-        TimeUnit.SECONDS.sleep(20000);
+        executor.shutdown();
+        while (!executor.isTerminated()){
+            TimeUnit.SECONDS.sleep(1);
+        }
     }
 }
 
 class RunSort implements Runnable{
-    static DataChecker dataChecker = new DataChecker();
-    Sorter sorter;
+    private static DataChecker dataChecker = new DataChecker();
+    private Sorter sorter;
 
     RunSort(Sorter sorter){
         this.sorter = sorter;
@@ -43,11 +46,11 @@ class RunSort implements Runnable{
     @Override
     public void run() {
         long pre = System.currentTimeMillis();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             sorter.sort(dataChecker.generateRandomArray());
         }
         long post = System.currentTimeMillis();
 
-        System.out.println(sorter.getClass().getSimpleName() + ": " + (post - pre) + " ms");
+        System.out.println(sorter.getClass().getSimpleName() + ": " + (post - pre) / 10 + " ms");
     }
 }

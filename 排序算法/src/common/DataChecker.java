@@ -8,10 +8,10 @@ public class DataChecker {
     public int[] generateRandomArray(){
         Random random = new Random();
 
-        int[] arr = new int[1000000];
+        int[] arr = new int[100000];
 
         for (int i = 0; i < arr.length; i++){
-            arr[i] = random.nextInt(1000000);
+            arr[i] = random.nextInt(100000);
         }
 
         return arr;

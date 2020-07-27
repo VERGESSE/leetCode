@@ -22,7 +22,7 @@ class Solution {
     }
 }
 
-/* 快速幂算法
+/* 快速幂算法               
 public double myPow(double x, int n) {
     if(x == 0) return 0;
     long b = n;
