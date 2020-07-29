@@ -1,11 +1,11 @@
 import java.util.HashMap;
 
 class LFUCache {
-    HashMap<Integer, Node> cache; // 存储缓存的内容
-    HashMap<Integer, DoublyLinkedList> freqMap; // 存储每个频次对应的双向链表
-    int size;
-    int capacity;
-    int min; // 存储当前最小频次
+    private HashMap<Integer, Node> cache; // 存储缓存的内容
+    private HashMap<Integer, DoublyLinkedList> freqMap; // 存储每个频次对应的双向链表
+    private int size;
+    private int capacity;
+    private int min; // 存储当前最小频次
 
     public LFUCache(int capacity) {
         cache = new HashMap<> (capacity);

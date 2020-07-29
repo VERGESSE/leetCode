@@ -12,12 +12,12 @@ class Solution {
         if (node == null) return true;
 
         int val = node.val;
-        if (lower != null && val <= lower) return false;
-        if (upper != null && val >= upper) return false;
+        if ((lower != null && val <= lower)
+                || (upper != null && val >= upper))
+            return false;
 
-        if (! helper(node.right, val, upper)) return false;
-        if (! helper(node.left, lower, val)) return false;
-        return true;
+        return helper(node.right, val, upper)
+                && helper(node.left, lower, val);
     }
 
     public boolean isValidBST(TreeNode root) {
