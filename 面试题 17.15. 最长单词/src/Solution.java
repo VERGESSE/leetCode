@@ -10,9 +10,7 @@ class Solution {
             }
         });
         Set<String> set = new HashSet<>(words.length);
-        for (String word : words) {
-            set.add(word);
-        }
+        set.addAll(Arrays.asList(words));
 
         for(String word : words){
             set.remove(word);
