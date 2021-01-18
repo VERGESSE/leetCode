@@ -11,18 +11,18 @@ class Solution {
             if (c1[0] != c2[0]){
                 return c1[0] - c2[0];
             }
-            int i =0, j = 0, timeI = 0, timeJ = 0;
+            int i = 0, j = 0, timeI = 0, timeJ = 0;
             while (c1[i] == c2[j]){
                 if (timeI ==2 || timeJ==2) break;
                 if (i+1 >= c1.length) {
                     i = 0;
                     timeI++;
-                }else i ++;
+                } else i ++;
 
                 if (j+1 >= c2.length){
                     j = 0;
                     timeJ++;
-                }else j++;
+                } else j++;
             }
             return c1[i] - c2[j];
         });
