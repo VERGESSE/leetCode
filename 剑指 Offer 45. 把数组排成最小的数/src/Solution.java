@@ -2,9 +2,12 @@ import java.util.Arrays;
 
 class Solution {
     public String minNumber(int[] nums) {
+        int length = 0;
         String[] strs = new String[nums.length];
-        for(int i = 0; i < nums.length; i++)
+        for(int i = 0; i < nums.length; i++) {
             strs[i] = String.valueOf(nums[i]);
+            length += strs[i].length();
+        }
         Arrays.sort(strs, (x, y) -> {
             char[] c1 = x.toCharArray();
             char[] c2 = y.toCharArray();
@@ -27,7 +30,7 @@ class Solution {
             return c1[i] - c2[j];
         });
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(length);
         for (String s : strs) {
             sb.append(s);
         }
