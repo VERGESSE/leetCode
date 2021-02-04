@@ -1,13 +1,11 @@
 import java.util.Arrays;
 
-class Solution {
+class Solution2 {
     public double[] medianSlidingWindow(int[] nums, int k) {
         double[] res = new double[nums.length - k + 1];
         int[] window = new int[k];
         //添加初始值
-        for (int i = 0; i < k; i++) {
-            window[i] = nums[i];
-        }
+        System.arraycopy(nums, 0, window, 0, k);
         //初始的快排，懒得写直接调用
         Arrays.sort(window);
         res[0] = getMid(window);
