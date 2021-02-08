@@ -5,7 +5,6 @@ class Solution {
         if(len < 2){
             return len;
         }
-
         int i = 0, j = 1;
         int max = 1;
         while(j < len && arr[i] == arr[j]){
