@@ -78,14 +78,14 @@ class TrieNode {
     }
 }
 
-/* 超时
-import java.util.*;
 
-class Solution {
+/* 超时
+class Solution2 {
     public List<Integer> findNumOfValidWords(String[] words, String[] puzzles) {
 
         int[] answer = new int[puzzles.length];
         char[][] chars = new char[puzzles.length][26];
+        char[][] wordArray = new char[words.length][26];
 
         for(int i = 0; i < puzzles.length; i++){
             for(int j = 0; j < puzzles[i].length(); j++){
@@ -93,15 +93,21 @@ class Solution {
             }
         }
 
-        for (String word : words) {
-            for (int j = 0; j < answer.length; j++) {
-                boolean flag = false;
-                char must = puzzles[j].charAt(0);
-                for (int k = 0; k < word.length(); k++) {
-                    if (word.charAt(k) == must){
-                        flag = true;
-                    }
-                    if (chars[j][word.charAt(k) - 'a'] == 0) {
+        for(int i = 0; i < wordArray.length; i++){
+            for(int j = 0; j < words[i].length(); j++){
+                wordArray[i][words[i].charAt(j) - 'a'] ++;
+            }
+        }
+        words = null;
+
+        for (int j = 0; j < answer.length; j++) {
+            for (char[] word : wordArray) {
+                if (word[puzzles[j].charAt(0) - 'a'] == 0){
+                    continue;
+                }
+                boolean flag = true;
+                for (int k = 0; k < 26; k++) {
+                    if (word[k] > 0 && chars[j][k] == 0) {
                         flag = false;
                         break;
                     }
