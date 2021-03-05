@@ -2,8 +2,8 @@ import java.util.*;
 
 class MyQueue {
 
-    private Stack<Integer> satck1;
-    private Stack<Integer> satck2;
+    private final Stack<Integer> satck1;
+    private final Stack<Integer> satck2;
 
     /** Initialize your data structure here. */
     public MyQueue() {
