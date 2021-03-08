@@ -8,7 +8,6 @@ class Solution {
         if(s.length() == 0){
             return ret;
         }
-
         getPartition(ret, s, 0, new ArrayList<>(s.length()));
 
         return ret;
