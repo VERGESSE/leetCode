@@ -14,16 +14,20 @@ class Solution {
         while (!pq.isEmpty()) {
             int[] info = pq.poll();
             int cost = info[0], k = info[1], place = info[2];
-            if (k > K+1 || cost > best.getOrDefault(k * 1000 + place, Integer.MAX_VALUE))
+            if (k > K+1 || cost > best.getOrDefault(
+                    k * 1000 + place, Integer.MAX_VALUE))
                 continue;
             if (place == dst)
                 return cost;
 
-            for (int nei = 0; nei < n; ++nei) if (graph[place][nei] > 0) {
-                int newcost = cost + graph[place][nei];
-                if (newcost < best.getOrDefault((k+1) * 1000 + nei, Integer.MAX_VALUE)) {
-                    pq.offer(new int[]{newcost, k+1, nei});
-                    best.put((k+1) * 1000 + nei, newcost);
+            for (int nei = 0; nei < n; ++nei) {
+                if (graph[place][nei] > 0) {
+                    int newcost = cost + graph[place][nei];
+                    if (newcost < best.getOrDefault(
+                            (k + 1) * 1000 + nei, Integer.MAX_VALUE)) {
+                        pq.offer(new int[]{newcost, k + 1, nei});
+                        best.put((k + 1) * 1000 + nei, newcost);
+                    }
                 }
             }
         }
