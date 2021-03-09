@@ -27,27 +27,26 @@ public class Main {
     }
 
     public int fun(int n, int p, int[] people, int[] price){
-        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         return dfs(map, people, price, 0, n, p);
     }
 
-    private int dfs(Map<String, Integer> map, int[] people, int[] price, int index, int maxPeople, int minPrice){
+    private int dfs(Map<Integer, Integer> map, int[] people, int[] price, int index, int maxPeople, int minPrice){
         if (maxPeople <= 0 && minPrice > 0){
             return 0;
         }
         if (minPrice == 0){
-            map.put(index + " " + maxPeople + " " + minPrice, 1);
+            map.put(index, 1);
             return 1;
         }
-        if (map.containsKey(index + " " + maxPeople + " " + minPrice)){
-            return map.get(index + " " + maxPeople + " " + minPrice);
+        if (map.containsKey(index)){
+            return map.get(index);
         }
         int res = 0;
-        for(int i = index; i < people.length; i++){
-            res += dfs(map, people, price, i + 1, maxPeople - people[i], minPrice - price[i]) % mod;
-            res += dfs(map, people, price, i + 1, maxPeople, minPrice) % mod;
-        }
-        map.put(index + " " + maxPeople + " " + minPrice, res % mod);
+        res += dfs(map, people, price, index + 1,
+                maxPeople - people[index], minPrice - price[index]) % mod;
+        res += dfs(map, people, price, index + 1, maxPeople, minPrice) % mod;
+        map.put(index, res % mod);
         return res % mod;
     }
 }
