@@ -5,7 +5,7 @@ class Solution {
         dummmyHead.next = head;
         ListNode cur = dummmyHead;
 
-        while (cur != null && cur.next != null){
+        while (cur.next != null){
 
             if (cur.next.val == val){
                 cur.next = cur.next.next;
@@ -16,3 +16,26 @@ class Solution {
         return dummmyHead.next;
     }
 }
+
+/* 2021/6/5 
+class Solution {
+    public ListNode removeElements(ListNode head, int val) {
+
+        // 头
+        while(head != null && head.val == val){
+            head = head.next;
+        }
+        ListNode dummyHead = head;
+        // 中
+        while(head != null && head.next != null){
+            if(head.next.val == val){
+                head.next = head.next.next;
+            } else {
+                head = head.next;
+            }
+        }
+
+        return dummyHead;
+    }
+}
+ */
