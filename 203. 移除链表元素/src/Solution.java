@@ -17,7 +17,7 @@ class Solution {
     }
 }
 
-/* 2021/6/5 
+/* 2021/6/5
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
 
