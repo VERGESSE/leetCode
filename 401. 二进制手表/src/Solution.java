@@ -20,9 +20,9 @@ class Solution {
             if (num - i > 5) continue;
             String[] hstr = hstrs[i];
             String[] mstr = mstrs[num - i];
-            for(int j = 0; j < hstr.length; j++) {
-                for(int k = 0; k < mstr.length; k++) {
-                    ans.add(hstr[j] + ":" + mstr[k]);
+            for (String aHstr : hstr) {
+                for (String aMstr : mstr) {
+                    ans.add(aHstr + ":" + aMstr);
                 }
             }
         }
