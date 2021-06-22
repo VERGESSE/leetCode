@@ -5,13 +5,49 @@ import java.util.Set;
 
 class Solution {
 
+    public String[] permutation(String s) {
+        List<String> res = new ArrayList<>();
+        char[] chars = s.toCharArray();
+        dfs(chars, res, 0);
+        return res.toArray(new String[0]);
+    }
+
+    private void dfs(char[] chars, List<String> res, int index){
+        if(index == chars.length - 1){
+            res.add(new String(chars));
+            return;
+        }
+
+        // 去重
+        Set<Character> set = new HashSet<>();
+        for(int i = index; i < chars.length; i++){
+            if(set.contains(chars[i])){
+                continue;
+            }
+            set.add(chars[i]);
+            swap(chars, i, index);
+            dfs(chars, res, index + 1);
+            swap(chars, i, index);
+        }
+    }
+
+    private void swap(char[] chars, int a, int b){
+        char t = chars[a];
+        chars[a] = chars[b];
+        chars[b] = t;
+    }
+}
+
+/*
+class Solution {
+
     List<String> res = new ArrayList<>();
     char[] chars;
 
     public String[] permutation(String s) {
         chars = s.toCharArray();
         dfs(0);
-        return res.toArray(new String[res.size()]);
+        return res.toArray(new String[]);
     }
 
     // 确定 x 位置的元素
@@ -42,3 +78,4 @@ class Solution {
         chars[j] = tmp;
     }
 }
+ */
