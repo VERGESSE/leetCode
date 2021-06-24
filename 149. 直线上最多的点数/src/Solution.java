@@ -115,38 +115,40 @@ class Solution {
 
 //fast
 class Solution2 {
-    int result = 0;
-
-    public  int maxPoints(int[][] points) {
-        int len = points.length;
-        if (len < 3) {
-            return len;
+    public int maxPoints(int[][] points) {
+        //暴力点就是,选出两个点，判断剩下的点和这些点在不在一个直线上;
+        if (points.length <= 0){
+            return 0;
         }
+        int maxPoint = 1;
+        for (int i = 0; i < points.length; i++){
+            for (int j = i + 1; j < points.length; j++){
+                int count = 2;
+                //判断在这个线上的个数;
+                //考虑一个问题1,2,3,4都在一条直线上;
+                //2的时候，需要再去考虑1吗？
+                //1的时候应该一定考虑过了把;
+                int x1 = points[i][0];
+                int y1 = points[i][1];
 
-        for (int i = 0; i < len - 1; i++) {
-            int x = points[i + 1][0] - points[i][0];
-            int y = points[i + 1][1] - points[i][1];
-            if (x != 0 || y != 0) {
-                maxPointsHelper(points, x, y, i);
-            }
-        }
-        //怎么解决的重复点问题：
-        //如果数组中所有点都相等，返回数组长度
-        //只要有不相同的两个点，就能进入下面的方法，就能统计到所有的点
-        return result == 0 ? len : result;
-    }
+                int x2 = points[j][0];
+                int y2 = points[j][1];
 
-    private  void maxPointsHelper(int[][] points, long a, long b, int base) {
-        int path = 2;
-        int len = points.length;
-        for (int i = 0; i < len; i++) {
-            if (i != base && i != base + 1) {
-                if ((points[i][1] - points[base][1]) * a == (points[i][0] - points[base][0]) * b)
-                {
-                    path++;
+                int deltaY = y2 - y1;
+                int deltaX = x2 - x1;
+
+                for (int k = j + 1; k < points.length; k++){
+                    int x3 = points[k][0];
+                    int y3 = points[k][1];
+                    if ((y3 - y1) * deltaX == (x3 - x1) * deltaY){
+                        count++;
+                    }
+                }
+                if (count > maxPoint){
+                    maxPoint = count;
                 }
             }
         }
-        result = Math.max(result, path);
+        return maxPoint;
     }
 }
