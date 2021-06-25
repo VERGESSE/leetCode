@@ -2,11 +2,9 @@ import java.util.*;
 
 class Solution {
     public int openLock(String[] deadends, String target) {
-
-        HashSet deadSet = new HashSet<>();
-        for (String deadend : deadends) {
-            deadSet.add(deadend);
-        }
+        
+        HashSet<String> deadSet = new HashSet<>();
+        Collections.addAll(deadSet, deadends);
 
         if (deadSet.contains("0000") || deadSet.contains(target)) return -1;
         if (target.equals("0000")) return 0;
