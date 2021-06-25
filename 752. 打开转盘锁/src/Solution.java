@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int openLock(String[] deadends, String target) {
-        
+
         HashSet<String> deadSet = new HashSet<>();
         Collections.addAll(deadSet, deadends);
 
