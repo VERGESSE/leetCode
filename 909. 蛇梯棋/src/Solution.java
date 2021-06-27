@@ -29,7 +29,7 @@ class Solution {
         return -1;
     }
 
-    public int[] id2rc(int id, int n) {
+    private int[] id2rc(int id, int n) {
         int r = (id - 1) / n, c = (id - 1) % n;
         if (r % 2 == 1) {
             c = n - 1 - c;
