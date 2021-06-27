@@ -4,7 +4,7 @@ class Solution {
     public int snakesAndLadders(int[][] board) {
         int n = board.length;
         boolean[] vis = new boolean[n * n + 1];
-        Queue<int[]> queue = new LinkedList<>();
+        Deque<int[]> queue = new ArrayDeque<>();
         queue.offer(new int[]{1, 0});
         while (!queue.isEmpty()) {
             int[] p = queue.poll();
