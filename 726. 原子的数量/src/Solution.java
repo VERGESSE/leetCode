@@ -35,7 +35,7 @@ class Solution {
         }
 
         Map<String, Integer> map = stack.pop();
-        TreeMap<String, Integer> treeMap = new TreeMap<String, Integer>(map);
+        TreeMap<String, Integer> treeMap = new TreeMap<>(map);
 
         StringBuffer sb = new StringBuffer();
         for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
