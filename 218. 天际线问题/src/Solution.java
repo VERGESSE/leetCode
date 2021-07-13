@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public List<List<Integer>> getSkyline(int[][] buildings) {
-        PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a, b) -> b[1] - a[1]);
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[1] - a[1]);
         List<Integer> boundaries = new ArrayList<Integer>();
         for (int[] building : buildings) {
             boundaries.add(building[0]);
@@ -10,7 +10,7 @@ class Solution {
         }
         Collections.sort(boundaries);
 
-        List<List<Integer>> ret = new ArrayList<List<Integer>>();
+        List<List<Integer>> ret = new ArrayList<>();
         int n = buildings.length, idx = 0;
         for (int boundary : boundaries) {
             while (idx < n && buildings[idx][0] <= boundary) {
