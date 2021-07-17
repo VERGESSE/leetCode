@@ -1,6 +1,23 @@
 class Solution {
     public int maxSubArray(int[] nums) {
 
+        int n = nums.length;
+        int sum = 0;
+        int min = 0;
+        int max = nums[0];
+        for (int num : nums) {
+            sum += num;
+            max = Math.max(max, sum - min);
+            min = Math.min(min, sum);
+        }
+        return max;
+    }
+}
+
+/*
+class Solution {
+    public int maxSubArray(int[] nums) {
+
         if(nums == null || nums.length == 0)
             return 0;
         int len = nums.length;
@@ -20,3 +37,4 @@ class Solution {
         return max;
     }
 }
+*/
